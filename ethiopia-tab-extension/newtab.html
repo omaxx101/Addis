@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethiopia Tab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="backdrop"></div>
+
+  <main class="shell">
+    <section class="hero panel">
+      <div class="eyebrow">
+        <span class="eyebrow-label">Addis Ababa</span>
+        <span id="date" class="eyebrow-date"></span>
+      </div>
+
+      <h1 id="time" class="time"></h1>
+      <p class="subtitle">A calm start with a view from Ethiopia.</p>
+
+      <div class="quote-card">
+        <p id="quote" class="quote"></p>
+        <p id="translation" class="translation"></p>
+      </div>
+    </section>
+
+    <aside class="sidebar panel">
+      <div class="panel-header">
+        <h2>Today's focus</h2>
+        <p>Keep it light. Press Enter to add.</p>
+      </div>
+
+      <input id="todoInput" type="text" placeholder="Add a task..." autocomplete="off">
+      <ul id="todoList" class="todo-list"></ul>
+    </aside>
+  </main>
+
+  <footer class="photo-meta panel panel-inline">
+    <div>
+      <p class="meta-label">Photo</p>
+      <p id="photoTitle" class="meta-value"></p>
+    </div>
+    <a id="photoLink" class="photo-link" href="#" target="_blank" rel="noreferrer">View source</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

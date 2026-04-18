@@ -1,9 +1,9 @@
 {
-  "manifest_version": 3,
-  "name": "Ethiopia Tab",
-  "version": "1.0",
-  "description": "Amharic aesthetic new tab",
-  "chrome_url_overrides": {
-    "newtab": "Hometab.html"
+    "manifest_version": 3,
+    "name": "Ethiopia Tab",
+    "version": "1.0",
+    "description": "Amharic aesthetic new tab",
+    "chrome_url_overrides": {
+      "newtab": "newtab.html"
+    }
   }
-}
