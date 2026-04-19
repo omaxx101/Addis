@@ -18,7 +18,7 @@ Addis is a clean and aesthetic browser extension that transforms your new tab in
 
 Clone the repository:
 ```bash
-git clone https://github.com/omaxxx101/addis.git
+git clone https://github.com/omaxx101/addis.git
 ```
 
 Or download as a ZIP and extract it.
