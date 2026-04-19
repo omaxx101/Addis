@@ -4,76 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ethiopia Tab</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <div class="backdrop"></div>
 
   <main class="shell">
-
-    <!-- HERO SECTION -->
-    <section class="hero panel">
-
-      <div class="eyebrow">
-        <span class="eyebrow-label">Addis Ababa</span>
-        
-        <!-- LANGUAGE TOGGLE BUTTON -->
-        <button id="langToggle" class="lang-btn">አማ | EN</button>
-
-        <span id="date" class="eyebrow-date"></span>
-      </div>
-
-      <h1 id="time" class="time"></h1>
-
-      <p id="subtitle" class="subtitle">
-        A calm start with a view from Ethiopia.
-      </p>
-
-      <div class="quote-card">
+    <section class="quote-card panel">
+      <div class="card-label">Quote</div>
+      <div>
         <p id="quote" class="quote"></p>
         <p id="translation" class="translation"></p>
       </div>
-
     </section>
 
-    <!-- TODO SECTION -->
     <aside class="sidebar panel">
-
       <div class="panel-header">
-        <h2 id="todoTitle">Today's focus</h2>
-        <p id="todoHint">Keep it light. Press Enter to add.</p>
+        <h2>Today's focus</h2>
+        <p>Keep it light. Press Enter to add.</p>
       </div>
 
-      <input
-        id="todoInput"
-        type="text"
-        placeholder="Add a task..."
-        autocomplete="off"
-      >
-
+      <input id="todoInput" type="text" placeholder="Add a task..." autocomplete="off">
       <ul id="todoList" class="todo-list"></ul>
-
     </aside>
 
+    <section class="time-card panel">
+      <div class="card-label">Addis Ababa</div>
+      <h1 id="time" class="time"></h1>
+    </section>
+
+    <section class="date-card panel">
+      <div class="card-label">Day</div>
+      <p id="date" class="date-display"></p>
+    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="photo-meta panel panel-inline">
     <div>
       <p class="meta-label">Photo</p>
       <p id="photoTitle" class="meta-value"></p>
     </div>
-
-    <a id="photoLink" class="photo-link" href="#" target="_blank" rel="noreferrer">
-      View source
-    </a>
+    <a id="photoLink" class="photo-link" href="#" target="_blank" rel="noreferrer">View source</a>
   </footer>
 
   <script src="script.js"></script>
