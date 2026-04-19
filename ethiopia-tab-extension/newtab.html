@@ -1,54 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="am">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ethiopia Tab</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>ኢትዮጵያ ታብ</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="backdrop"></div>
 
-  <main class="shell">
-    <section class="quote-card panel">
-      <div class="card-label">Quote</div>
-      <div>
-        <p id="quote" class="quote"></p>
-        <p id="translation" class="translation"></p>
-      </div>
+  <!-- TOP LEFT: GREETING -->
+  <section class="panel greeting-card">
+    <div class="card-label"></div>
+    <p class="greeting-text">ሰላም / SALAAM</p>
+  </section>
+
+  <!-- TOP RIGHT: TODO -->
+  <aside class="panel todo-card">
+    <div class="card-label">የዛሬ ትኩረት / TODO</div>
+    <input id="todoInput" placeholder="Add task..." />
+    <ul id="todoList"></ul>
+  </aside>
+
+  <!-- TIme * Date -->
+  <section class="time-date-card panel"> 
+    <div class="card-label"> አዲስ አበባ / Addis Ababa GMT +03:00 </div> 
+    <div class="time-date-row"> 
+      <h1 id="time" class="time"></h1> 
+      <div class="date-block">
+         <p id="date" class="date-display"></p> 
+        </div> 
+      </div> 
     </section>
 
-    <aside class="sidebar panel">
-      <div class="panel-header">
-        <h2>Today's focus</h2>
-        <p>Keep it light. Press Enter to add.</p>
-      </div>
+  <!-- BOTTOM RIGHT: QUOTE + PHOTO -->
+  <section class="panel quote-card">
+    <div class="card-label">ጥቅስ / QUOTE</div>
 
-      <input id="todoInput" type="text" placeholder="Add a task..." autocomplete="off">
-      <ul id="todoList" class="todo-list"></ul>
-    </aside>
+    <p id="quote"></p>
+    <p id="translation"></p>
 
-    <section class="time-card panel">
-      <div class="card-label">Addis Ababa</div>
-      <h1 id="time" class="time"></h1>
-    </section>
-
-    <section class="date-card panel">
-      <div class="card-label">Day</div>
-      <p id="date" class="date-display"></p>
-    </section>
-  </main>
-
-  <footer class="photo-meta panel panel-inline">
-    <div>
-      <p class="meta-label">Photo</p>
-      <p id="photoTitle" class="meta-value"></p>
-    </div>
-    <a id="photoLink" class="photo-link" href="#" target="_blank" rel="noreferrer">View source</a>
-  </footer>
+    <a id="photoLink" target="_blank" class="photo-link">
+      📷 Photo of the Day
+    </a>
+  </section>
 
   <script src="script.js"></script>
 </body>

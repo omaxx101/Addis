@@ -142,7 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
       emptyState.className = "todo-item";
       const emptyCopy = document.createElement("span");
       emptyCopy.className = "todo-copy";
-      emptyCopy.textContent = "No tasks yet. Add one to get started.";
       emptyState.appendChild(emptyCopy);
       listEl.appendChild(emptyState);
       return;
