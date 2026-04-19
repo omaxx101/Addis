@@ -1,3 +1,231 @@
+:root {
+  --bg: #09131a;
+  --panel: rgba(7, 19, 26, 0.55);
+  --panel-strong: rgba(7, 19, 26, 0.74);
+  --line: rgba(255, 255, 255, 0.14);
+  --text: #f7f6f2;
+  --muted: rgba(247, 246, 242, 0.72);
+  --accent: #d8b15d;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  font-family: "Manrope", "Noto Sans Ethiopic", sans-serif;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(120deg, rgba(8, 17, 24, 0.76), rgba(8, 17, 24, 0.26)),
+    radial-gradient(circle at top left, rgba(216, 177, 93, 0.28), transparent 30%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(6, 14, 20, 0.3), transparent 45%),
+    radial-gradient(circle at bottom right, rgba(24, 81, 78, 0.28), transparent 35%);
+  pointer-events: none;
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.quote-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(28rem, calc(50vw - 3rem));
+  padding: 18px 20px;
+}
+
+.quote {
+  margin: 0;
+  font-family: "Noto Sans Ethiopic", "Manrope", sans-serif;
+  font-size: clamp(1.15rem, 1.9vw, 1.6rem);
+  line-height: 1.4;
+}
+
+.translation {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(24rem, calc(50vw - 3rem));
+  max-height: min(42vh, 32rem);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: auto;
+}
+
+.time-card,
+.date-card {
+  position: absolute;
+  bottom: 0;
+  padding: 18px 20px;
+}
+
+.time-card {
+  left: 0;
+  width: min(22rem, calc(50vw - 3rem));
+}
+
+.date-card {
+  right: 0;
+  width: min(22rem, calc(50vw - 3rem));
+}
+
+.card-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.time {
+  margin: 14px 0 0;
+  font-size: clamp(2.5rem, 5.6vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 700;
+}
+
+.date-display {
+  margin: 14px 0 0;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.35;
+}
+
+.panel-header h2 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.panel-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+#todoInput {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font: inherit;
+  outline: none;
+}
+
+#todoInput::placeholder {
+  color: rgba(247, 246, 242, 0.45);
+}
+
+#todoInput:focus {
+  border-color: rgba(216, 177, 93, 0.7);
+  box-shadow: 0 0 0 4px rgba(216, 177, 93, 0.12);
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.todo-copy {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.todo-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-toggle,
+.todo-delete {
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.todo-toggle {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+}
+
+.todo-delete {
+  padding: 0;
+  background: transparent;
+  color: rgba(247, 246, 242, 0.58);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 .todo-item.done .todo-copy {
   text-decoration: line-through;
   color: rgba(247, 246, 242, 0.48);
