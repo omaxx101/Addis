@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.backgroundImage = [
       "linear-gradient(120deg, rgba(8, 17, 24, 0.76), rgba(8, 17, 24, 0.26))",
       "radial-gradient(circle at top left, rgba(216, 177, 93, 0.28), transparent 30%)",
-      url("${background.url}")
+      `url("${background.url}")`
     ].join(", ");
 
     photoTitleEl.textContent = background.title;
@@ -119,8 +119,8 @@ document.addEventListener("DOMContentLoaded", () => {
     quoteEl.textContent = quote.am;
     translationEl.textContent = quote.en;
   }
-  
-function loadTodos() {
+
+  function loadTodos() {
     try {
       return JSON.parse(localStorage.getItem(storageKeys.todos) || "[]");
     } catch {
@@ -150,7 +150,7 @@ function loadTodos() {
 
     todos.forEach((todo) => {
       const item = document.createElement("li");
-      item.className = todo-item${todo.done ? " done" : ""};
+      item.className = `todo-item${todo.done ? " done" : ""}`;
 
       const copy = document.createElement("span");
       copy.className = "todo-copy";
