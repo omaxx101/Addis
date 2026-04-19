@@ -1,5 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+ // ----------------------------
+  // 🎯 ELEMENTS (MUST BE FIRST)
+  // ----------------------------
+  const timeEl = document.getElementById("time");
+  const dateEl = document.getElementById("date");
+  const quoteEl = document.getElementById("quote");
+  const translationEl = document.getElementById("translation");
+  const photoTitleEl = document.getElementById("photoTitle");
+  const photoLinkEl = document.getElementById("photoLink");
+  const inputEl = document.getElementById("todoInput");
+  const listEl = document.getElementById("todoList");
+
   // ----------------------------
   // 🖼️ BACKGROUND (DAILY ROTATION - STOCK STYLE)
   // ----------------------------
@@ -143,26 +155,53 @@ document.addEventListener("DOMContentLoaded", () => {
     renderTodos();
   });
 
-  // ----------------------------
-  // 🎯 INIT ELEMENTS
-  // ----------------------------
-  const timeEl = document.getElementById("time");
-  const dateEl = document.getElementById("date");
-  const quoteEl = document.getElementById("quote");
-  const translationEl = document.getElementById("translation");
-  const photoTitleEl = document.getElementById("photoTitle");
-  const photoLinkEl = document.getElementById("photoLink");
-  const inputEl = document.getElementById("todoInput");
-  const listEl = document.getElementById("todoList");
 
-  const quotes = [
-    { am: "ትዕግስት ወርቅ ነው።", en: "Patience is gold." },
-    { am: "ትንሽ በትንሽ ታላቅ ይሆናል።", en: "Small steps become greatness." },
-    { am: "የታገሰ ይበረታል።", en: "Endurance builds strength." },
-    { am: "እውነት ይበልጣል።", en: "Truth rises above." },
-    { am: "ስራ ከተማ ያበጃል።", en: "Work builds a city." }
+function generateQuotes() {
+  const amharicRoots = [
+    "ትዕግስት", "ተስፋ", "ስራ", "እውነት", "ጥረት", "ስኬት",
+    "ፍቅር", "እውቀት", "ጥበብ", "ጉዞ", "ብርታት", "ሰላም"
   ];
 
+  const englishRoots = [
+    "Patience", "Hope", "Work", "Truth", "Effort", "Success",
+    "Love", "Knowledge", "Wisdom", "Journey", "Strength", "Peace"
+  ];
+
+  const endingsAM = [
+    "ይበረታል።",
+    "ይረዳል።",
+    "ወደፊት ያመራል።",
+    "ሕይወትን ይቀይራል።",
+    "ታላቅ ያደርጋል።"
+  ];
+
+  const endingsEN = [
+    "builds strength.",
+    "leads forward.",
+    "changes life.",
+    "creates greatness.",
+    "shapes destiny."
+  ];
+
+  const quotes = [];
+
+  for (let i = 0; i < 360; i++) {
+    const amRoot = amharicRoots[i % amharicRoots.length];
+    const enRoot = englishRoots[i % englishRoots.length];
+
+    const amEnd = endingsAM[i % endingsAM.length];
+    const enEnd = endingsEN[i % endingsEN.length];
+
+    quotes.push({
+      am: `${amRoot} ${amEnd}`,
+      en: `${enRoot} ${enEnd}`
+    });
+  }
+
+  return quotes;
+}
+
+const quotes = generateQuotes();
   let todos = loadTodos();
 
   // ----------------------------
