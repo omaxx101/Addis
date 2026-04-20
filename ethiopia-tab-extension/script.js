@@ -35,7 +35,31 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Bajaj in Ethiopia",
       source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/bajaj.jpg"
     }
-    
+    {
+      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/buna.jpg",
+      title: "Buna in Ethiopia",
+      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/buna.jpg"
+    }
+    {
+      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/dalol.jpg",
+      title: "dalol in Ethiopia",
+      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/dalol.jpg"
+    }
+    {
+      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/highlands.jpg",
+      title: "highlands in Ethiopia",
+      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/highlands.jpg"
+    }
+    {
+      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/lalibela.jpg",
+      title: "lalibela in Ethiopia",
+      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/lalibela.jpg"
+    }
+    {
+      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/tree.jpg",
+      title: "Tree in Ethiopia",
+      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/tree.jpg"
+    }
   ];
 
   const quotes = [
