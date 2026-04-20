@@ -99,23 +99,75 @@ document.addEventListener("DOMContentLoaded", () => {
     photoLinkEl.href = background.source;
   }
 
+  function getEthiopianDateAmharic() {
+    const now = new Date();
+  
+    const months = [
+      "መስከረም", "ጥቅምት", "ኅዳር", "ታኅሣሥ",
+      "ጥር", "የካቲት", "መጋቢት", "ሚያዝያ",
+      "ግንቦት", "ሰኔ", "ሐምሌ", "ነሐሴ", "ጳጉሜን"
+    ];
+  
+    const amharicDays = [
+      "ሰኞ", "ማክሰኞ", "ረቡዕ",
+      "ሐሙስ", "አርብ", "ቅዳሜ", "እሑድ"
+    ];
+  
+    let gYear = now.getFullYear();
+    let ethYear = gYear - 8;
+  
+    const ethNewYear = new Date(gYear, 8, 11);
+  
+    let diffDays = Math.floor((now - ethNewYear) / (1000 * 60 * 60 * 24));
+  
+    if (diffDays < 0) {
+      ethYear -= 1;
+      diffDays += 365;
+    }
+  
+    const monthIndex = Math.floor(diffDays / 30);
+    const day = (diffDays % 30) + 1;
+  
+    const safeMonth = Math.min(Math.max(monthIndex, 0), 12);
+  
+    const dayIndex = now.getDay(); 
+  
+    return `${amharicDays[dayIndex]} ${months[safeMonth]} ${day}, ${ethYear}`;
+  }
+
+
   function updateTime() {
     const now = new Date();
-
+  
+    // TIME
     timeEl.textContent = now.toLocaleTimeString("en-US", {
       timeZone: "Africa/Addis_Ababa",
       hour: "2-digit",
       minute: "2-digit",
       hour12: true
     });
-
-    dateEl.textContent = now.toLocaleDateString("en-US", {
+  
+    // GREGORIAN DATE
+    const gregorian = now.toLocaleDateString("en-US", {
       timeZone: "Africa/Addis_Ababa",
       weekday: "long",
       month: "long",
-      day: "numeric"
+      day: "numeric",
+      year: "numeric"
     });
+  
+    // ETHIOPIAN DATE (AMHARIC)
+    const ethiopian = getEthiopianDateAmharic();
+  
+    // COMBINED DISPLAY
+    dateEl.innerHTML = `
+      ${gregorian}<br>
+      <span style="color:rgba(247,246,242,0.65); font-size:0.9em">
+        ${ethiopian}
+      </span>
+    `;
   }
+
 
   function setQuote() {
     const quote = quotes[Math.floor(Math.random() * quotes.length)];

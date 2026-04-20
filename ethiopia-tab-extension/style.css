@@ -44,7 +44,7 @@ body {
 }
 
 /* POSITIONS */
-.greeting-card { top: 20px; left: 20px; font-weight: 700; }
+.greeting-card { top: 20px; left: 20px;}
 .todo-card { top: 20px; right: 20px; width: 280px; }
 .time-date-card { bottom: 20px; left: 20px; }
 .quote-card { bottom: 20px; right: 20px; width: 280px; }
@@ -64,6 +64,22 @@ body {
   gap: 4px;
 }
 
+.greeting-card {
+  background: transparent;
+  border: 0;
+  backdrop-filter: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.quote-card {
+  background: transparent;
+  border: 0;
+  backdrop-filter: none;
+  box-shadow: none;
+  padding: 0;
+}
+
 /* TEXT */
 .card-label {
   font-size: 11px;
@@ -74,8 +90,8 @@ body {
 }
 
 .greeting-text {
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 800;
+  font-size: clamp(40px, 5vw, 48px);
 }
 
 #time {
@@ -94,7 +110,7 @@ body {
 
 /* QUOTE */
 #quote {
-  font-size: 18px;
+  font-size: 26 px;
   margin: 0;
 }
 
