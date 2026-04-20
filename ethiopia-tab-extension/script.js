@@ -30,6 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Pastoral landscape in Ethiopia",
       source: "https://commons.wikimedia.org/wiki/File:Landscape_in_Ethiopia.jpg"
     }
+    {
+      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/bajaj.jpg",
+      title: "Bajaj in Ethiopia",
+      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/bajaj.jpg"
+    }
+    
   ];
 
   const quotes = [
