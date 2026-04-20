@@ -18,6 +18,9 @@ body {
   overflow: hidden;
   font-family: "Manrope", "Noto Sans Ethiopic", sans-serif;
   background: var(--bg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--text);
 }
 
@@ -43,8 +46,23 @@ body {
 /* POSITIONS */
 .greeting-card { top: 20px; left: 20px; font-weight: 700; }
 .todo-card { top: 20px; right: 20px; width: 280px; }
-.time-card { bottom: 20px; left: 20px; }
+.time-date-card { bottom: 20px; left: 20px; }
 .quote-card { bottom: 20px; right: 20px; width: 280px; }
+
+.time-date-card {
+  background: transparent;
+  border: 0;
+  backdrop-filter: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.time-date-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
 
 /* TEXT */
 .card-label {
@@ -61,12 +79,17 @@ body {
 }
 
 #time {
-  font-size: 40px;
+  font-size: clamp(40px, 5vw, 72px);
   margin: 0;
+  line-height: 0.95;
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
 }
 
 #date {
   color: var(--muted);
+  margin: 0;
+  font-size: clamp(14px, 1.8vw, 18px);
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* QUOTE */
@@ -96,16 +119,4 @@ body {
   margin-top: 10px;
   color: var(--accent);
   text-decoration: none;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  body {
-    overflow-y: auto;
-  }
-
-  .panel {
-    position: static;
-    margin: 10px;
-  }
 }

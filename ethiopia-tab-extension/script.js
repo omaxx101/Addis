@@ -92,7 +92,10 @@ document.addEventListener("DOMContentLoaded", () => {
       `url("${background.url}")`
     ].join(", ");
 
-    photoTitleEl.textContent = background.title;
+    if (photoTitleEl) {
+      photoTitleEl.textContent = background.title;
+    }
+
     photoLinkEl.href = background.source;
   }
 
