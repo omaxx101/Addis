@@ -1,159 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const backgrounds = [
-    {
-      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/bajaj.jpg",
-      title: "Bajaj in Ethiopia",
-      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/bajaj.jpg"
-    },
-    {
-      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/buna.jpg",
-      title: "Buna in Ethiopia",
-      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/buna.jpg"
-    },
-    {
-      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/dalol.jpg",
-      title: "dalol in Ethiopia",
-      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/dalol.jpg"
-    },
-    {
-      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/highlands.jpg",
-      title: "highlands in Ethiopia",
-      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/highlands.jpg"
-    },
-    {
-      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/lalibela.jpg",
-      title: "lalibela in Ethiopia",
-      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/lalibela.jpg"
-    },
-    {
-      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/tree.jpg",
-      title: "Tree in Ethiopia",
-      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/tree.jpg"
-    },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/afarcrater.jpeg",
-        title: "Afar Crater",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/afarcrater.jpeg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/afarsalt.jpeg",
-        title: "Afar Salt Flats",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/afarsalt.jpeg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/afarvolcano.jpeg",
-        title: "Afar Volcano",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/afarvolcano.jpeg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/axum.jpeg",
-        title: "Axum",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/axum.jpeg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/bajaj.jpg",
-        title: "Bajaj in Ethiopia",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/bajaj.jpg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/buna.jpg",
-        title: "Ethiopian Coffee",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/buna.jpg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/bunacini.jpeg",
-        title: "Coffee Ceremony",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/bunacini.jpeg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/cave.jpeg",
-        title: "Ethiopian Cave",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/cave.jpeg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/city.jpg",
-        title: "City View",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/city.jpg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/citytower.jpg",
-        title: "City Tower",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/citytower.jpg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/dalol.jpg",
-        title: "Dallol",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/dalol.jpg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/fasilcastle.jpeg",
-        title: "Fasil Castle",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/fasilcastle.jpeg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/hawasa.jpeg",
-        title: "Hawassa",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/hawasa.jpeg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/highlands.jpg",
-        title: "Ethiopian Highlands",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/highlands.jpg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/lalibela.jpg",
-        title: "Lalibela",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/lalibela.jpg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/lalibelacastle.jpeg",
-        title: "Lalibela Architecture",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/lalibelacastle.jpeg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/mesob.jpeg",
-        title: "Mesob",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/mesob.jpeg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/old%20bus.jpg",
-        title: "Old Ethiopian Bus",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/old%20bus.jpg"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/traditional-ethiopian-architecture-v0-66adkmifrrfc1.webp",
-        title: "Traditional Architecture",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/traditional-ethiopian-architecture-v0-66adkmifrrfc1.webp"
-      },
-      {
-        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/tree.jpg",
-        title: "Ethiopian Tree Landscape",
-        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/tree.jpg"
-      }
-    ];
-  
+document.addEventListener("DOMContentLoaded", async () => {
+
+  let backgrounds = [];
 
   const quotes = [
-    {
-      am: "ትዕግስት ወርቅ ነው።",
-      en: "Patience is gold."
-    },
-    {
-      am: "ትንሽ በትንሽ ታላቅ ይሆናል።",
-      en: "Little by little becomes something great."
-    },
-    {
-      am: "የታገሰ ይበረታል።",
-      en: "The one who endures grows strong."
-    },
-    {
-      am: "እውነት ይበልጣል።",
-      en: "Truth rises above."
-    },
-    {
-      am: "ስራ ከተማ ያበጃል።",
-      en: "Work is what builds a city."
-    }
+    { am: "ትዕግስት ወርቅ ነው።", en: "Patience is gold." },
+    { am: "ትንሽ በትንሽ ታላቅ ይሆናል።", en: "Little by little becomes something great." },
+    { am: "የታገሰ ይበረታል።", en: "The one who endures grows strong." },
+    { am: "እውነት ይበልጣል።", en: "Truth rises above." },
+    { am: "ስራ ከተማ ያበጃል።", en: "Work is what builds a city." }
   ];
 
   const timeEl = document.getElementById("time");
@@ -170,6 +24,35 @@ document.addEventListener("DOMContentLoaded", () => {
     todos: "ethiopia-tab:todos"
   };
 
+  // ✅ FETCH IMAGES FROM GITHUB
+  async function fetchGitHubImages() {
+    try {
+      const res = await fetch("https://api.github.com/repos/omaxx101/Addis/contents/ethiopia-tab-extension/images");
+      const data = await res.json();
+
+      backgrounds = data
+        .filter(file =>
+          file.type === "file" &&
+          /\.(jpg|jpeg|png|webp)$/i.test(file.name)
+        )
+        .map(file => ({
+          url: file.download_url,
+          title: formatTitle(file.name),
+          source: file.html_url
+        }));
+
+    } catch (err) {
+      console.error("GitHub fetch failed:", err);
+    }
+  }
+
+  function formatTitle(name) {
+    return name
+      .replace(/\.[^/.]+$/, "")
+      .replace(/[-_]/g, " ")
+      .replace(/\b\w/g, c => c.toUpperCase());
+  }
+
   function selectIndex(items, key) {
     const lastIndex = Number.parseInt(localStorage.getItem(key) || "-1", 10);
     let index = Math.floor(Math.random() * items.length);
@@ -185,95 +68,75 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function setBackground() {
-    const background = backgrounds[selectIndex(backgrounds, storageKeys.photo)];
+    if (!backgrounds.length) return;
+
+    const bg = backgrounds[selectIndex(backgrounds, storageKeys.photo)];
 
     document.body.style.backgroundImage = [
       "linear-gradient(120deg, rgba(8, 17, 24, 0.76), rgba(8, 17, 24, 0.26))",
       "radial-gradient(circle at top left, rgba(216, 177, 93, 0.28), transparent 30%)",
-      `url("${background.url}")`
+      `url("${bg.url}")`
     ].join(", ");
 
-    if (photoTitleEl) {
-      photoTitleEl.textContent = background.title;
-    }
-
-    photoLinkEl.href = background.source;
+    if (photoTitleEl) photoTitleEl.textContent = bg.title;
+    if (photoLinkEl) photoLinkEl.href = bg.source;
   }
 
   function getEthiopianDateAmharic() {
     const now = new Date();
-  
-    const months = [
-      "መስከረም", "ጥቅምት", "ኅዳር", "ታኅሣሥ",
-      "ጥር", "የካቲት", "መጋቢት", "ሚያዝያ",
-      "ግንቦት", "ሰኔ", "ሐምሌ", "ነሐሴ", "ጳጉሜን"
-    ];
-  
-    const amharicDays = [
-      "ሰኞ", "ማክሰኞ", "ረቡዕ",
-      "ሐሙስ", "አርብ", "ቅዳሜ", "እሑድ"
-    ];
-  
+
+    const months = ["መስከረም","ጥቅምት","ኅዳር","ታኅሣሥ","ጥር","የካቲት","መጋቢት","ሚያዝያ","ግንቦት","ሰኔ","ሐምሌ","ነሐሴ","ጳጉሜን"];
+    const days = ["ሰኞ","ማክሰኞ","ረቡዕ","ሐሙስ","አርብ","ቅዳሜ","እሑድ"];
+
     let gYear = now.getFullYear();
     let ethYear = gYear - 8;
-  
-    const ethNewYear = new Date(gYear, 8, 11);
-  
-    let diffDays = Math.floor((now - ethNewYear) / (1000 * 60 * 60 * 24));
-  
-    if (diffDays < 0) {
-      ethYear -= 1;
-      diffDays += 365;
-    }
-  
-    const monthIndex = Math.floor(diffDays / 30);
-    const day = (diffDays % 30) + 1;
-  
-    const safeMonth = Math.min(Math.max(monthIndex, 0), 12);
-  
-    const dayIndex = now.getDay(); 
-  
-    return `${amharicDays[dayIndex]} ${months[safeMonth]} ${day}, ${ethYear}`;
-  }
 
+    const newYear = new Date(gYear, 8, 11);
+    let diff = Math.floor((now - newYear) / 86400000);
+
+    if (diff < 0) {
+      ethYear--;
+      diff += 365;
+    }
+
+    const month = Math.floor(diff / 30);
+    const day = (diff % 30) + 1;
+
+    return `${days[now.getDay()]} ${months[Math.min(month, 12)]} ${day}, ${ethYear}`;
+  }
 
   function updateTime() {
     const now = new Date();
-  
-    // TIME
-    timeEl.textContent = now.toLocaleTimeString("en-US", {
-      timeZone: "Africa/Addis_Ababa",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: true
-    });
-  
-    // GREGORIAN DATE
-    const gregorian = now.toLocaleDateString("en-US", {
-      timeZone: "Africa/Addis_Ababa",
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-      year: "numeric"
-    });
-  
-    // ETHIOPIAN DATE (AMHARIC)
-    const ethiopian = getEthiopianDateAmharic();
-  
-    // COMBINED DISPLAY
-    dateEl.innerHTML = `
-      ${gregorian}<br>
-      <span style="color:rgba(247,246,242,0.65); font-size:0.9em">
-        ${ethiopian}
-      </span>
-    `;
+
+    if (timeEl) {
+      timeEl.textContent = now.toLocaleTimeString("en-US", {
+        timeZone: "Africa/Addis_Ababa",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true
+      });
+    }
+
+    if (dateEl) {
+      const gregorian = now.toLocaleDateString("en-US", {
+        timeZone: "Africa/Addis_Ababa",
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+      });
+
+      dateEl.innerHTML = `${gregorian}<br>
+      <span style="opacity:0.7;font-size:0.9em">
+        ${getEthiopianDateAmharic()}
+      </span>`;
+    }
   }
 
-
   function setQuote() {
-    const quote = quotes[Math.floor(Math.random() * quotes.length)];
-    quoteEl.textContent = quote.am;
-    translationEl.textContent = quote.en;
+    const q = quotes[Math.floor(Math.random() * quotes.length)];
+    if (quoteEl) quoteEl.textContent = q.am;
+    if (translationEl) translationEl.textContent = q.en;
   }
 
   function loadTodos() {
@@ -290,90 +153,69 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem(storageKeys.todos, JSON.stringify(todos));
   }
 
+  // ✅ FIXED TODO
   function renderTodos() {
-    listEl.textContent = "";
+    if (!listEl) return;
 
-    if (!todos.length) {
-      const emptyState = document.createElement("li");
-      emptyState.className = "todo-item";
-    
-      const emptyCopy = document.createElement("span");
-      emptyCopy.className = "todo-copy";
-      emptyCopy.textContent = "";
-    
-      emptyState.appendChild(emptyCopy);
-      listEl.appendChild(emptyState);
-      return;
-    }
+    listEl.innerHTML = "";
+    if (!todos.length) return;
 
-    todos.forEach((todo) => {
-      const item = document.createElement("li");
-      item.className = `todo-item${todo.done ? " done" : ""}`;
+    todos.forEach(todo => {
+      const li = document.createElement("li");
+      li.className = `todo-item${todo.done ? " done" : ""}`;
 
-      const copy = document.createElement("span");
-      copy.className = "todo-copy";
-      copy.textContent = todo.text;
+      const text = document.createElement("span");
+      text.className = "todo-copy";
+      text.textContent = todo.text;
 
       const actions = document.createElement("div");
       actions.className = "todo-actions";
 
       const toggle = document.createElement("button");
       toggle.className = "todo-toggle";
-      toggle.type = "button";
-      toggle.setAttribute("aria-label", `Mark ${todo.text} as ${todo.done ? "not done" : "done"}`);
-      toggle.addEventListener("click", () => {
-        todos = todos.map((entry) =>
-          entry.id === todo.id ? { ...entry, done: !entry.done } : entry
-        );
+      toggle.textContent = todo.done ? "✔" : "○";
+
+      toggle.onclick = () => {
+        todos = todos.map(t => t.id === todo.id ? { ...t, done: !t.done } : t);
         saveTodos();
         renderTodos();
-      });
+      };
 
-      const remove = document.createElement("button");
-      remove.className = "todo-delete";
-      remove.type = "button";
-      remove.setAttribute("aria-label", `Delete ${todo.text}`);
-      remove.textContent = "x";
-      remove.addEventListener("click", () => {
-        todos = todos.filter((entry) => entry.id !== todo.id);
+      const del = document.createElement("button");
+      del.className = "todo-delete";
+      del.textContent = "×";
+
+      del.onclick = () => {
+        todos = todos.filter(t => t.id !== todo.id);
         saveTodos();
         renderTodos();
-      });
+      };
 
-      actions.append(toggle, remove);
-      item.append(copy, actions);
-      listEl.appendChild(item);
+      actions.append(toggle, del);
+      li.append(text, actions);
+      listEl.appendChild(li);
     });
   }
 
-  inputEl.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter") {
-      return;
-    }
+  inputEl?.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter") return;
 
     const text = inputEl.value.trim();
+    if (!text) return;
 
-    if (!text) {
-      return;
-    }
-
-    todos = [
-      {
-        id: Date.now(),
-        text,
-        done: false
-      },
-      ...todos
-    ];
-
+    todos = [{ id: Date.now(), text, done: false }, ...todos];
     inputEl.value = "";
+
     saveTodos();
     renderTodos();
   });
 
-  setBackground();
+  // 🚀 IMPORTANT ORDER (THIS WAS YOUR MAIN BUG)
+  await fetchGitHubImages();   // load images first
+  setBackground();             // THEN use them
+
   setQuote();
   updateTime();
   renderTodos();
-  window.setInterval(updateTime, 1000);
+  setInterval(updateTime, 1000);
 });
