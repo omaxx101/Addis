@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const backgrounds = [
     {
-      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/axum.jpg",
-      title: "Axum in Ethiopia",
-      source:"https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/axum.jpg"
-    },
-    {
       url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/bajaj.jpg",
       title: "Bajaj in Ethiopia",
       source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/bajaj.jpg"
@@ -35,12 +30,108 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Tree in Ethiopia",
       source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/tree.jpg"
     },
-    {
-      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/fasilcastle.jpeg",
-      title: "fasil castle in Ethiopia",
-      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/fasilcastle.jpeg"
-    }
-  ];
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/afarcrater.jpeg",
+        title: "Afar Crater",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/afarcrater.jpeg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/afarsalt.jpeg",
+        title: "Afar Salt Flats",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/afarsalt.jpeg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/afarvolcano.jpeg",
+        title: "Afar Volcano",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/afarvolcano.jpeg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/axum.jpeg",
+        title: "Axum",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/axum.jpeg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/bajaj.jpg",
+        title: "Bajaj in Ethiopia",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/bajaj.jpg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/buna.jpg",
+        title: "Ethiopian Coffee",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/buna.jpg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/bunacini.jpeg",
+        title: "Coffee Ceremony",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/bunacini.jpeg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/cave.jpeg",
+        title: "Ethiopian Cave",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/cave.jpeg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/city.jpg",
+        title: "City View",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/city.jpg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/citytower.jpg",
+        title: "City Tower",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/citytower.jpg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/dalol.jpg",
+        title: "Dallol",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/dalol.jpg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/fasilcastle.jpeg",
+        title: "Fasil Castle",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/fasilcastle.jpeg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/hawasa.jpeg",
+        title: "Hawassa",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/hawasa.jpeg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/highlands.jpg",
+        title: "Ethiopian Highlands",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/highlands.jpg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/lalibela.jpg",
+        title: "Lalibela",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/lalibela.jpg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/lalibelacastle.jpeg",
+        title: "Lalibela Architecture",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/lalibelacastle.jpeg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/mesob.jpeg",
+        title: "Mesob",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/mesob.jpeg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/old%20bus.jpg",
+        title: "Old Ethiopian Bus",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/old%20bus.jpg"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/traditional-ethiopian-architecture-v0-66adkmifrrfc1.webp",
+        title: "Traditional Architecture",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/traditional-ethiopian-architecture-v0-66adkmifrrfc1.webp"
+      },
+      {
+        url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/tree.jpg",
+        title: "Ethiopian Tree Landscape",
+        source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/tree.jpg"
+      }
+    ];
+  
 
   const quotes = [
     {
@@ -205,8 +296,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!todos.length) {
       const emptyState = document.createElement("li");
       emptyState.className = "todo-item";
+    
       const emptyCopy = document.createElement("span");
       emptyCopy.className = "todo-copy";
+      emptyCopy.textContent = "";
+    
       emptyState.appendChild(emptyCopy);
       listEl.appendChild(emptyState);
       return;
