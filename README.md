@@ -3,7 +3,7 @@
 Addis is a clean and aesthetic browser extension that transforms your new tab into a focused, minimal workspace. It combines productivity and inspiration with a live clock, daily quotes, and a simple to-do list — all on top of a dynamic background.
 ## Preview
 
-![Dashboard Preview](contents/ethiopia-tab-extension/ScreenShots/AddisTab.png.png)
+![Dashboard Preview](contents/ethiopia-tab-extension/ScreenShots/AddisTab.png)
 ---
 
 ## ✨ Features
