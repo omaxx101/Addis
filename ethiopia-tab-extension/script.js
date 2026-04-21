@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
       remove.className = "todo-delete";
       remove.type = "button";
       remove.setAttribute("aria-label", `Delete ${todo.text}`);
-      remove.textContent = "×";
+      remove.textContent = "x";
       remove.addEventListener("click", () => {
         todos = todos.filter((entry) => entry.id !== todo.id);
         saveTodos();
