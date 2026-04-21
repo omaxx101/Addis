@@ -1,64 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
   const backgrounds = [
     {
-      url: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ethiopian%20Landscape%20%285065722585%29.jpg",
-      title: "Ethiopian highlands",
-      source: "https://commons.wikimedia.org/wiki/File:Ethiopian_Landscape_(5065722585).jpg"
+      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/axum.jpg",
+      title: "Axum in Ethiopia",
+      source:"https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/axum.jpg"
     },
-    {
-      url: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ethiopian%20Landscape%20%285071832239%29.jpg",
-      title: "Road through the Ethiopian landscape",
-      source: "https://commons.wikimedia.org/wiki/File:Ethiopian_Landscape_(5071832239).jpg"
-    },
-    {
-      url: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Simien%20Mountains%20Landscape%2C%20Ethiopia%20%282466094405%29.jpg",
-      title: "Simien Mountains",
-      source: "https://commons.wikimedia.org/wiki/File:Simien_Mountains_Landscape,_Ethiopia_(2466094405).jpg"
-    },
-    {
-      url: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lalibela%20Ethiopia%20landscape%20%281a%29.jpg",
-      title: "Lalibela landscape",
-      source: "https://commons.wikimedia.org/wiki/File:Lalibela_Ethiopia_landscape_(1a).jpg"
-    },
-    {
-      url: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ethiopian%20Landscape%20%285065810666%29.jpg",
-      title: "Northern Ethiopia view",
-      source: "https://commons.wikimedia.org/wiki/File:Ethiopian_Landscape_(5065810666).jpg"
-    },
-    {
-      url: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Landscape%20in%20Ethiopia.jpg",
-      title: "Pastoral landscape in Ethiopia",
-      source: "https://commons.wikimedia.org/wiki/File:Landscape_in_Ethiopia.jpg"
-    }
     {
       url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/bajaj.jpg",
       title: "Bajaj in Ethiopia",
       source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/bajaj.jpg"
-    }
+    },
     {
       url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/buna.jpg",
       title: "Buna in Ethiopia",
       source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/buna.jpg"
-    }
+    },
     {
       url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/dalol.jpg",
       title: "dalol in Ethiopia",
       source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/dalol.jpg"
-    }
+    },
     {
       url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/highlands.jpg",
       title: "highlands in Ethiopia",
       source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/highlands.jpg"
-    }
+    },
     {
       url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/lalibela.jpg",
       title: "lalibela in Ethiopia",
       source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/lalibela.jpg"
-    }
+    },
     {
       url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/tree.jpg",
       title: "Tree in Ethiopia",
       source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/tree.jpg"
+    },
+    {
+      url: "https://raw.githubusercontent.com/omaxx101/Addis/main/ethiopia-tab-extension/images/fasilcastle.jpeg",
+      title: "fasil castle in Ethiopia",
+      source: "https://github.com/omaxx101/Addis/blob/main/ethiopia-tab-extension/images/fasilcastle.jpeg"
     }
   ];
 

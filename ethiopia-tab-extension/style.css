@@ -44,7 +44,7 @@ body {
 }
 
 /* POSITIONS */
-.greeting-card { top: 20px; left: 20px;}
+.greeting-card { top: 1px; left: 10px;}
 .todo-card { top: 20px; right: 20px; width: 280px; }
 .time-date-card { bottom: 20px; left: 20px; }
 .quote-card { bottom: 20px; right: 20px; width: 280px; }
@@ -91,7 +91,7 @@ body {
 
 .greeting-text {
   font-weight: 800;
-  font-size: clamp(40px, 5vw, 48px);
+  font-size: clamp(40px, 5vw, 60px);
 }
 
 #time {
