@@ -28,7 +28,7 @@ body {
 .backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.01);
   pointer-events: none;
 }
 
@@ -44,7 +44,7 @@ body {
 }
 
 /* POSITIONS */
-.greeting-card { top: 1px; left: 20px;}
+.greeting-card { top: 20px; left: 20px;}
 .todo-card { top: 20px; right: 20px; width: 280px; }
 .time-date-card { bottom: 20px; left: 20px; }
 .quote-card { bottom: 20px; right: 20px; width: 280px; }
@@ -92,6 +92,8 @@ body {
 .greeting-text {
   font-weight: 800;
   font-size: clamp(40px, 5vw, 60px);
+  margin: 0;
+  transform: translateY(-6px);
 }
 
 #time {
