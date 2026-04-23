@@ -49,7 +49,7 @@ function updateGreeting() {
   // ✅ FETCH IMAGES FROM GITHUB
   async function fetchGitHubImages() {
     try {
-      const res = await fetch("https://api.github.com/repos/omaxx101/Addis/contents/ethiopia-tab-extension/images");
+      const res = await fetch("https://api.github.com/repos/omaxx101/Addis/contents/images");
       const data = await res.json();
 
       backgrounds = data
@@ -106,25 +106,31 @@ function updateGreeting() {
 
   function getEthiopianDateAmharic() {
     const now = new Date();
-
+  
     const months = ["መስከረም","ጥቅምት","ኅዳር","ታኅሣሥ","ጥር","የካቲት","መጋቢት","ሚያዝያ","ግንቦት","ሰኔ","ሐምሌ","ነሐሴ","ጳጉሜን"];
-    const days = ["ሰኞ","ማክሰኞ","ረቡዕ","ሐሙስ","አርብ","ቅዳሜ","እሑድ"];
-
+    const days = ["እሑድ","ሰኞ","ማክሰኞ","ረቡዕ","ሐሙስ","አርብ","ቅዳሜ"];
+  
+    // ✅ Get Ethiopia weekday correctly
+    const weekday = new Intl.DateTimeFormat("am-ET", {
+      weekday: "long",
+      timeZone: "Africa/Addis_Ababa"
+    }).format(now);
+  
     let gYear = now.getFullYear();
     let ethYear = gYear - 8;
-
+  
     const newYear = new Date(gYear, 8, 11);
     let diff = Math.floor((now - newYear) / 86400000);
-
+  
     if (diff < 0) {
       ethYear--;
       diff += 365;
     }
-
+  
     const month = Math.floor(diff / 30);
     const day = (diff % 30) + 1;
-
-    return `${days[now.getDay()]} ${months[Math.min(month, 12)]} ${day}, ${ethYear}`;
+  
+    return `${weekday} ${months[Math.min(month, 12)]} ${day}, ${ethYear}`;
   }
 
   function updateTime() {

@@ -112,7 +112,8 @@ body {
 
 /* QUOTE */
 #quote {
-  font-size: 26 px;
+  font-weight: 400;
+  font-size: clamp(20px, 5vw, 30px);
   margin: 0;
 }
 
