@@ -1,9 +1,27 @@
 {
-    "manifest_version": 3,
-    "name": "Ethiopia Tab",
-    "version": "1.0",
-    "description": "Amharic aesthetic new tab",
-    "chrome_url_overrides": {
-      "newtab": "newtab.html"
-    }
+  "manifest_version": 3,
+  "name": "Ethiopia Tab",
+  "version": "1.0",
+  "description": "Amharic aesthetic new tab",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.github.com/*",
+    "https://raw.githubusercontent.com/*"
+  ],
+  "action": {
+    "default_title": "Ethiopia Tab"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
   }
+}
