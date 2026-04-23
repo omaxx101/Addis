@@ -1,4 +1,26 @@
 document.addEventListener("DOMContentLoaded", async () => {
+  const greetingText = document.getElementById("greetingText");
+
+function getOrAskName() {
+  let name = localStorage.getItem("ethiopia-tab:name");
+
+  if (!name) {
+    name = prompt("እባክዎ ስምዎን ያስገቡ / Enter your name:");
+
+    if (name && name.trim() !== "") {
+      localStorage.setItem("ethiopia-tab:name", name.trim());
+    } else {
+      name = "Guest";
+    }
+  }
+
+  return name;
+}
+
+function updateGreeting() {
+  const name = getOrAskName();
+  greetingText.textContent = `ሰላም  ${name}`;
+}
 
   let backgrounds = [];
 
@@ -213,7 +235,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 🚀 IMPORTANT ORDER (THIS WAS YOUR MAIN BUG)
   await fetchGitHubImages();   // load images first
   setBackground();             // THEN use them
-
+  updateGreeting();
   setQuote();
   updateTime();
   renderTodos();
